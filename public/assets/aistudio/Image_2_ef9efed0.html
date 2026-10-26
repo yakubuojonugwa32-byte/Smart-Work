@@ -1,0 +1,195 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Shashika Shehan - Fullstack Web Developer</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Poppins -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#f5af19',
+              goldHover: '#e09e13',
+              dark: '#000000',
+              card: '#0a0a0a',
+              track: '#1a1a1a',
+              gray: '#999999'
+            }
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for Ghost Backdrop & Accents -->
+<style data-purpose="custom-decorations">
+    .ghost-text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.04);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      text-transform: capitalize;
+    }
+    @media (min-width: 768px) {
+      .ghost-text {
+        font-size: 7.5rem;
+      }
+    }
+    .ghost-text-left {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-55%);
+      font-size: 5.5rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.04);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans antialiased selection:bg-brand-gold selection:text-black">
+<!-- BEGIN: MainHeader -->
+<header class="w-full bg-black/90 backdrop-blur-md sticky top-0 z-50 transition-all border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="text-2xl font-black tracking-widest text-white hover:text-brand-gold transition duration-200" data-purpose="brand-logo" href="#home">
+        SHEHAN
+      </a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center space-x-7 text-sm font-medium tracking-wide" data-purpose="main-navigation">
+<a class="text-white relative py-1 hover:text-brand-gold transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-brand-gold" href="#home">Home</a>
+<a class="text-gray-300 hover:text-brand-gold transition-colors duration-200" href="#about">About</a>
+<a class="text-gray-300 hover:text-brand-gold transition-colors duration-200" href="#resume">Resume</a>
+<a class="text-gray-300 hover:text-brand-gold transition-colors duration-200" href="#services">Services</a>
+<a class="text-gray-300 hover:text-brand-gold transition-colors duration-200" href="#skills">Skills</a>
+<a class="text-gray-300 hover:text-brand-gold transition-colors duration-200" href="#projects">Projects</a>
+<a class="text-gray-300 hover:text-brand-gold transition-colors duration-200" href="#blog">My Blog</a>
+<a class="text-gray-300 hover:text-brand-gold transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<!-- Mobile Menu Toggle Button -->
+<button aria-label="Toggle navigation" class="md:hidden text-gray-300 hover:text-white focus:outline-none" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden bg-black py-12 lg:py-0" id="home">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
+<!-- Hero Text Content -->
+<div class="lg:col-span-6 z-10 space-y-6 pt-4 lg:pt-0">
+<!-- Sub-headline tag -->
+<span class="inline-block text-brand-gold tracking-[0.25em] text-xs lg:text-sm font-bold uppercase">
+          HELLO!
+        </span>
+<!-- Main Headline -->
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
+          I'm <font color="#f5af19">Enoch Yakubu</font></h1>
+<!-- Profession Title -->
+<p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 font-semibold tracking-wide">
+          Fullstack Web Developer
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="px-8 py-3.5 rounded-full bg-brand-gold text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-brand-goldHover shadow-lg hover:shadow-brand-gold/20 transform hover:-translate-y-0.5" href="#contact">
+            HIRE ME
+          </a>
+<a class="px-8 py-3.5 rounded-full border border-neutral-700 bg-transparent text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:border-brand-gold hover:text-brand-gold" href="#projects">
+            MY WORKS
+          </a>
+</div>
+</div>
+<!-- Hero Visual / Portrait -->
+<div class="lg:col-span-6 flex justify-center lg:justify-end relative">
+<div class="relative w-full max-w-md lg:max-w-none flex items-center justify-center">
+<img alt="Developer coding workspace screen" class="w-full max-h-[580px] object-cover object-top rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOodbaGy1LYpl0tSGcrR7auz1n28NXh5IHT0CqenEc2q78EUPNyW1exKhuN-VsRC5xyUrnvV-XE9ZKHtls8AKqkcpM5hGnqU19LxgfYJ3Rao_sITnE9GcMdvzIGca4X0wQ3vf4ph3QrchrDPzqHqt734O3o5fHqca02-FHQNOfJ4UD8BnjmXUYza3Hmh97j6wbU8RTVD_5AHK_s8aoatPaCuHbvaujK6wDeg2_nXgI3tdULcmCl9n3">
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: AboutSection -->
+<section class="relative py-24 bg-black border-t border-neutral-900 overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Developer Image in About section -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-full max-w-sm rounded-lg overflow-hidden">
+<img alt="Shashika Shehan portrait" class="w-full h-auto object-cover rounded-lg shadow-2xl filter brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XboSPDmK38ZofoAtVFjV8h20Fw5i5vNjwSuttjgxZ5ipywBvv-cie9FWk-IOZ0iEINVrhmdwWYCUNB89Z_bw71i0byjlUjSp_NYCHMcm9assYZdRwOM0e6w09F-gTkSgDjHMDSCgB_mrHazNKbD_spKpQCt30jVILsBPCd50uAthgm9auHL7m8Vk16qELGo3oNq8I2jCIXAAYBENo4919T3I0I5nHsLv9YvLiEJP-xfkp41dvvJAoGgA">
+</div>
+</div>
+<!-- About Information Content -->
+<div class="lg:col-span-7 space-y-7 relative">
+<!-- Section Heading with Background Watermark -->
+<div class="relative pb-2">
+<span class="ghost-text-left">About</span>
+<h2 class="relative z-10 text-4xl lg:text-5xl font-black text-white tracking-tight">
+              About Me
+            </h2>
+</div>
+<!-- Intro Paragraph -->
+<p class="text-neutral-400 text-sm lg:text-base leading-relaxed max-w-xl">Passionate multi-disciplinary engineer operating at the intersection of electrical engineering, informatics, and civil engineering (génie civil). Driven by solving complex structural and technological challenges through automated systems, smart design, and technical precision as I advance my civil engineering studies.</p>
+<!-- Personal Metadata List -->
+<div class="space-y-3.5 text-sm pt-2" data-purpose="personal-details"><div class="grid grid-cols-12 gap-2"><span class="col-span-4 sm:col-span-3 font-bold text-white tracking-wide">Name:</span><span class="col-span-8 sm:col-span-9 text-neutral-400">Enoch Yakubu</span></div><div class="grid grid-cols-12 gap-2"><span class="col-span-4 sm:col-span-3 font-bold text-white tracking-wide">Discipline:</span><span class="col-span-8 sm:col-span-9 text-neutral-400">Civil, Electrical &amp; Informatics</span></div><div class="grid grid-cols-12 gap-2"><span class="col-span-4 sm:col-span-3 font-bold text-white tracking-wide">Specialization:</span><span class="col-span-8 sm:col-span-9 text-neutral-400">Génie Civil &amp; Smart Systems</span></div><div class="grid grid-cols-12 gap-2"><span class="col-span-4 sm:col-span-3 font-bold text-white tracking-wide">Email:</span><span class="col-span-8 sm:col-span-9 text-neutral-400">enoch.yakubu@engineering.tech</span></div><div class="grid grid-cols-12 gap-2"><span class="col-span-4 sm:col-span-3 font-bold text-white tracking-wide">Availability:</span><span class="col-span-8 sm:col-span-9 text-brand-gold font-medium">Available for Projects &amp; Research</span></div></div>
+<!-- Project Stats Counter -->
+<div class="pt-2"><p class="text-xl font-bold tracking-wide text-white"><span class="text-brand-gold mr-1.5 font-extrabold text-2xl">35+</span> Engineering &amp; Tech Projects Completed</p></div>
+<!-- Action Button: Download CV -->
+<div class="pt-2">
+<a class="inline-block px-8 py-3.5 rounded-full bg-brand-gold text-black font-bold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-brand-goldHover shadow-lg hover:shadow-brand-gold/25 transform hover:-translate-y-0.5" href="#">
+              DOWNLOAD CV
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutSection -->
+<!-- BEGIN: SkillsSection -->
+<section class="relative py-24 bg-black border-t border-neutral-900 overflow-hidden" id="skills">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<!-- Skills Header with Centered Ghost Watermark -->
+<div class="text-center relative mb-16">
+<span class="ghost-text">Skills</span>
+<h2 class="relative z-10 text-4xl lg:text-5xl font-black text-white tracking-tight mb-3">
+          My Skills
+        </h2>
+<p class="relative z-10 text-neutral-400 text-sm max-w-xl mx-auto leading-relaxed">Core competencies spanning electrical design, software &amp; informatics, and civil engineering fundamentals.</p>
+</div>
+<!-- Skills 2-Column Progress Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-5xl mx-auto" data-purpose="skills-progress-bars"><div class="space-y-2"><div class="flex justify-between items-center text-sm font-bold text-white"><span class="tracking-wide">Electrical Systems &amp; Circuitry</span><span class="text-white font-medium">92%</span></div><div class="w-full bg-brand-track h-2 rounded-full overflow-hidden"><div class="bg-brand-gold h-full rounded-full transition-all duration-1000 ease-out" style="width: 92%;"></div></div></div><div class="space-y-2"><div class="flex justify-between items-center text-sm font-bold text-white"><span class="tracking-wide">CAD, BIM &amp; Structural Drafting</span><span class="text-white font-medium">85%</span></div><div class="w-full bg-brand-track h-2 rounded-full overflow-hidden"><div class="bg-brand-gold h-full rounded-full transition-all duration-1000 ease-out" style="width: 85%;"></div></div></div><div class="space-y-2"><div class="flex justify-between items-center text-sm font-bold text-white"><span class="tracking-wide">Informatics &amp; Software Systems</span><span class="text-white font-medium">88%</span></div><div class="w-full bg-brand-track h-2 rounded-full overflow-hidden"><div class="bg-brand-gold h-full rounded-full transition-all duration-1000 ease-out" style="width: 88%;"></div></div></div><div class="space-y-2"><div class="flex justify-between items-center text-sm font-bold text-white"><span class="tracking-wide">Embedded Systems &amp; Automation</span><span class="text-white font-medium">82%</span></div><div class="w-full bg-brand-track h-2 rounded-full overflow-hidden"><div class="bg-brand-gold h-full rounded-full transition-all duration-1000 ease-out" style="width: 82%;"></div></div></div><div class="space-y-2"><div class="flex justify-between items-center text-sm font-bold text-white"><span class="tracking-wide">Civil Engineering (Génie Civil)</span><span class="text-white font-medium">78%</span></div><div class="w-full bg-brand-track h-2 rounded-full overflow-hidden"><div class="bg-brand-gold h-full rounded-full transition-all duration-1000 ease-out" style="width: 78%;"></div></div></div><div class="space-y-2"><div class="flex justify-between items-center text-sm font-bold text-white"><span class="tracking-wide">Technical Computing &amp; Analysis</span><span class="text-white font-medium">80%</span></div><div class="w-full bg-brand-track h-2 rounded-full overflow-hidden"><div class="bg-brand-gold h-full rounded-full transition-all duration-1000 ease-out" style="width: 80%;"></div></div></div></div>
+</div>
+</section>
+<!-- END: SkillsSection -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-black py-10 border-t border-neutral-900 text-center text-neutral-500 text-xs">
+<div class="max-w-7xl mx-auto px-6">
+<p class="">© 2024 Enoch Yakubu. All rights reserved.</p>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+
+
+</body></html>

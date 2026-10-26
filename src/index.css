@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #2563eb;
+  --color-brand-blue-hover: #1d4ed8;
+  --color-brand-blue-dark: #1e40af;
+  --color-brand-blue-light: #eff6ff;
+  --color-brand-blue-subtle: #dbeafe;
+  --color-brand-dark: #0f172a;
+  --color-brand-card: #ffffff;
+  --color-brand-track: #e2e8f0;
+  --color-brand-gray: #64748b;
+
+  /* Typography System: Sora for Headings & Logo, Poppins for Body */
+  --font-sans: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-heading: 'Sora', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-sora: 'Sora', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-poppins: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings & Brand Logo use Sora */
+h1, h2, h3, h4, h5, h6, .font-heading, [data-purpose="brand-logo"] {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Custom styles for Ghost Backdrop & Accents in Sora 800/900 */
+.ghost-text {
+  font-family: var(--font-heading);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: rgba(37, 99, 235, 0.05);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  text-transform: capitalize;
+  letter-spacing: -0.04em;
+}
+
+@media (min-width: 768px) {
+  .ghost-text {
+    font-size: 7.5rem;
+  }
+}
+
+.ghost-text-left {
+  font-family: var(--font-heading);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-55%);
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: rgba(37, 99, 235, 0.05);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.04em;
+}
+
+@media (min-width: 768px) {
+  .ghost-text-left {
+    font-size: 6.5rem;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
