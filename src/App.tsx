@@ -19,6 +19,7 @@ import { HireMeModal } from './components/HireMeModal';
 import { ProjectDetailModal } from './components/ProjectDetailModal';
 import { BlogModal } from './components/BlogModal';
 import { BlogPost, Project } from './types/portfolio';
+import { KineticMarquee } from './components/KineticTypography';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -70,6 +71,20 @@ export default function App() {
       <main>
         {/* 1. Hero Section */}
         <HeroSection onOpenHireMe={() => handleOpenHireMe()} />
+
+        {/* Kinetic Typography Marquee Ribbon */}
+        <KineticMarquee
+          items={[
+            'Fullstack Web Architecture',
+            'Génie Civil & BIM Modeling',
+            'Embedded IoT Telemetry',
+            'Structural Mechanics & FEA',
+            'Autodesk Revit Automation',
+            'React & TypeScript Cloud Platforms',
+            'Smart Grid Electronics',
+          ]}
+          speedSeconds={32}
+        />
 
         {/* 2. About Me Section */}
         <AboutSection onOpenCvModal={() => setIsCvOpen(true)} />

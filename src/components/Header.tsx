@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
@@ -39,14 +40,16 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onOpenHireMe }) =
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-        {/* Brand Logo */}
-        <a
+        {/* Kinetic Brand Logo */}
+        <motion.a
           href="#home"
-          className="text-2xl font-black tracking-widest text-slate-900 hover:text-blue-600 transition duration-200 uppercase"
+          whileHover={{ scale: 1.04, letterSpacing: '0.18em' }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="text-2xl font-black tracking-widest text-slate-900 hover:text-blue-600 transition-colors duration-200 uppercase inline-block font-heading"
           data-purpose="brand-logo"
         >
           {PERSONAL_INFO.brandName}
-        </a>
+        </motion.a>
 
         {/* Desktop Navigation Links */}
         <nav

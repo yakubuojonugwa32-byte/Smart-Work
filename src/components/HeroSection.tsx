@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Sparkles, Terminal, Cpu, Building } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { containerStagger, itemFadeUp, scaleUp } from '../utils/animations';
+import { KineticCharacters, KineticWordFlipper } from './KineticTypography';
 
 interface HeroSectionProps {
   onOpenHireMe: () => void;
@@ -47,21 +48,33 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenHireMe }) => {
             <span className="h-[2px] w-10 bg-blue-600/30 inline-block"></span>
           </motion.div>
 
-          {/* 2. Main Headline */}
+          {/* 2. Main Headline with Kinetic Characters */}
           <motion.h1
             variants={itemFadeUp}
             className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight font-heading"
           >
-            I'm <span className="text-blue-600">{PERSONAL_INFO.name}</span>
+            I'm{' '}
+            <span className="text-blue-600">
+              <KineticCharacters text={PERSONAL_INFO.name} delay={0.25} />
+            </span>
           </motion.h1>
 
-          {/* 3. Profession Title */}
-          <motion.p
+          {/* 3. Profession Title with Kinetic Word Flipper */}
+          <motion.div
             variants={itemFadeUp}
-            className="text-xl sm:text-2xl lg:text-3xl text-slate-700 font-semibold tracking-wide font-heading"
+            className="text-xl sm:text-2xl lg:text-3xl text-slate-700 font-semibold tracking-wide font-heading flex flex-wrap items-center gap-x-2.5 min-h-[44px]"
           >
-            {PERSONAL_INFO.title}
-          </motion.p>
+            <span className="text-slate-500 font-normal">Specialized in</span>
+            <KineticWordFlipper
+              words={[
+                'Fullstack Web Apps',
+                'Génie Civil & BIM',
+                'Embedded IoT & Sensors',
+                'Structural Computing',
+              ]}
+              className="text-blue-600 font-bold"
+            />
+          </motion.div>
 
           {/* 4. Multi-discipline sub-pills */}
           <motion.div variants={itemFadeUp} className="flex flex-wrap items-center gap-2 pt-1 text-xs">

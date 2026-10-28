@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Download, CheckCircle2, User } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { containerStagger, itemFadeUp, scaleUp, ghostWatermarkAnim } from '../utils/animations';
+import { KineticCounter } from './KineticTypography';
 
 interface AboutSectionProps {
   onOpenCvModal: () => void;
@@ -129,11 +130,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenCvModal }) => 
               ))}
             </motion.div>
 
-            {/* Project Stats Counter */}
+            {/* Project Stats Counter with Kinetic Counter */}
             <motion.div variants={itemFadeUp} className="pt-2">
               <p className="text-xl font-bold tracking-wide text-slate-900 flex items-center font-heading">
                 <span className="text-blue-600 mr-2 font-extrabold text-3xl font-heading">
-                  {PERSONAL_INFO.projectsCompleted}
+                  <KineticCounter target={35} suffix="+" duration={1.6} />
                 </span>{' '}
                 Engineering & Tech Projects Completed
               </p>

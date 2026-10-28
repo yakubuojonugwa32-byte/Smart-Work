@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { SKILLS } from '../data/portfolioData';
 import { Layers } from 'lucide-react';
 import { containerStagger, itemFadeUp, ghostWatermarkAnim, easeSmooth } from '../utils/animations';
+import { KineticCounter } from './KineticTypography';
 
 export const SkillsSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<'all' | 'electrical' | 'software' | 'civil' | 'computing'>('all');
@@ -98,7 +99,9 @@ export const SkillsSection: React.FC = () => {
                     </span>
                   )}
                 </span>
-                <span className="text-blue-600 font-bold font-heading">{skill.percentage}%</span>
+                <span className="text-blue-600 font-bold font-heading">
+                  <KineticCounter target={skill.percentage} suffix="%" duration={1.6} />
+                </span>
               </div>
 
               {/* Progress bar line with smooth width animation */}
@@ -107,7 +110,7 @@ export const SkillsSection: React.FC = () => {
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.percentage}%` }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1.1, ease: easeSmooth, delay: 0.15 }}
+                  transition={{ duration: 1.6, ease: easeSmooth, delay: 0.2 }}
                   className="bg-blue-600 h-full rounded-full shadow-[0_0_12px_rgba(37,99,235,0.4)]"
                 />
               </div>
